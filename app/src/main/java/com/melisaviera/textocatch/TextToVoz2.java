@@ -1,6 +1,7 @@
 package com.melisaviera.textocatch;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
@@ -25,6 +26,7 @@ public class TextToVoz2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//invalida la rotacion de la pantalla
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);//Evita el modo oscuro de los telefonos
         setContentView(R.layout.activity_text_to_voz2);
 
         File dir = getExternalFilesDir(null);

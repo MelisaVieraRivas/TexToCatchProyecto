@@ -2,6 +2,7 @@ package com.melisaviera.textocatch;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.FileProvider;
 
 import android.content.DialogInterface;
@@ -51,16 +52,14 @@ public class TextToVoz extends AppCompatActivity {
     private final int VOZ = 2;
     private final int PICK_IMAGE=3;
     //
-    public final String APP_TAG = "MyCustomApp";
-    public final static int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 1034;
-    public String photoFileName = "photo.jpg";
-    File photoFile;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//invalida la rotacion de la pantalla
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);//Evita el modo oscuro de los telefonos
         setContentView(R.layout.activity_text_to_voz);
         btnStop=findViewById(R.id.btnStop);
         btnGaleria=findViewById(R.id.btbGaleria);
