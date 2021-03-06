@@ -251,7 +251,7 @@ public class TextToVoz extends AppCompatActivity {
                             }
                         }
                     }
-                    textView.setText(strBuilder.toString().substring(0, strBuilder.toString().length() - 1));//Una vez reconocido el texto lo muestra en el textview
+                    textView.setText(strBuilder.toString().substring(0, strBuilder.toString().length() - 1).toUpperCase());//Una vez reconocido el texto lo muestra en el textview
                 }
             }catch (Exception e){
                 textView.setText("No hay texto reconocible");
